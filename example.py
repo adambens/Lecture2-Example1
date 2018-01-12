@@ -18,7 +18,8 @@ def form1():
 @app.route('/result',methods=["GET"])
 def result_form1():
     if request.method == "GET":
-        print(request.args) # Check out your Terminal window where you're running this...
+        print(request.args) # Check out your Terminal window where you're running this...  
+        #very nice
         result_str = ""
         for k in request.args:
             result_str += "{} - {}<br><br>".format(k, request.args.get(k,""))
@@ -28,7 +29,7 @@ def result_form1():
 @app.route('/form2')
 def form2():
     return """<form action="http://localhost:5000/letter" method='GET'>
-    <input type="text" name="phrase"><br>
+    <input type="text" name="phrase"><br> 
     <input type="submit" value="Submit">
     """
 
